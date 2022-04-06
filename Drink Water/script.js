@@ -3,7 +3,7 @@ const liters = document.getElementById('liters')
 const percentage = document.getElementById('percentage')
 const remained = document.getElementById('remained')
 
-
+updateBigCup()
 
 smallCups.forEach((cup, idx) => {
   cup.addEventListener('click', () => highlightCups(idx))
@@ -27,7 +27,7 @@ function highlightCups(idx) {
 
 }
 
-funtion updateBigCup() {
+function updateBigCup(){
   const fullCups = document.querySelectorAll('.cup-small.full').length
   const totalCups = smallCups.length
 
@@ -48,6 +48,5 @@ funtion updateBigCup() {
     remained.style.visibility = 'visible'
     liters.innerText = `${2 - (250 * fullCups / 1000)}L`
   }
-
 
 }
